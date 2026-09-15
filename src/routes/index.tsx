@@ -249,13 +249,13 @@ function Index() {
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {[
-                  [BookOpen, "Sound Learning"],
-                  [HeartHandshake, "Good Character"],
-                  [Users, "Close Guidance"],
-                ].map(([Icon, label]) => (
-                  <div key={label as string} className="border-l-2 border-gold bg-emerald-soft p-4">
+                  { icon: BookOpen, label: "Sound Learning" },
+                  { icon: HeartHandshake, label: "Good Character" },
+                  { icon: Users, label: "Close Guidance" },
+                ].map(({ icon: Icon, label }) => (
+                  <div key={label} className="border-l-2 border-gold bg-emerald-soft p-4">
                     <Icon className="mb-3 h-5 w-5 text-primary" />
-                    <p className="text-sm font-bold text-foreground">{label as string}</p>
+                    <p className="text-sm font-bold text-foreground">{label}</p>
                   </div>
                 ))}
               </div>
@@ -353,15 +353,15 @@ function Index() {
                 </div>
                 <div id="contact-details" className="grid content-center gap-5 border-t border-primary-foreground/15 bg-primary-soft p-8 sm:p-12 lg:border-l lg:border-t-0">
                   {[
-                    [Phone, "Phone", "Details coming soon"],
-                    [Mail, "Email", "Details coming soon"],
-                    [MapPin, "Campus address", "Details coming soon"],
-                  ].map(([Icon, label, value]) => (
-                    <div key={label as string} className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
+                    { icon: Phone, label: "Phone", value: "Details coming soon" },
+                    { icon: Mail, label: "Email", value: "Details coming soon" },
+                    { icon: MapPin, label: "Campus address", value: "Details coming soon" },
+                  ].map(({ icon: Icon, label, value }) => (
+                    <div key={label} className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
                       <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-primary-foreground/10 text-gold-light"><Icon className="h-5 w-5" /></span>
                       <div className="min-w-0">
-                        <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary-foreground/55">{label as string}</p>
-                        <p className="mt-1 font-semibold text-primary-foreground">{value as string}</p>
+                        <p className="text-xs font-bold uppercase tracking-[0.14em] text-primary-foreground/55">{label}</p>
+                        <p className="mt-1 font-semibold text-primary-foreground">{value}</p>
                       </div>
                     </div>
                   ))}
