@@ -272,3 +272,29 @@
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+.font-urdu {
+  font-family: var(--font-urdu);
+  line-height: 2.4;
+}
+
+@utility pattern-islamic {
+  background-color: transparent;
+  background-image:
+    radial-gradient(circle at 0 0, color-mix(in oklab, var(--primary) 9%, transparent) 2px, transparent 2.5px),
+    radial-gradient(circle at 32px 32px, color-mix(in oklab, var(--primary) 9%, transparent) 2px, transparent 2.5px),
+    linear-gradient(45deg, transparent 47%, color-mix(in oklab, var(--gold) 14%, transparent) 47.5%, color-mix(in oklab, var(--gold) 14%, transparent) 52.5%, transparent 53%),
+    linear-gradient(-45deg, transparent 47%, color-mix(in oklab, var(--gold) 14%, transparent) 47.5%, color-mix(in oklab, var(--gold) 14%, transparent) 52.5%, transparent 53%);
+  background-size: 64px 64px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.slide-fade {
+  opacity: 0;
+  transition: opacity 1600ms ease;
+}
+
+.slide-fade[data-active="true"] {
+  opacity: 1;
+}
