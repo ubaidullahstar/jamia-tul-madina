@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as AdministrationRouteImport } from './routes/administration'
+import { Route as AdmissionsRouteImport } from './routes/admissions'
+import { Route as AwardsRouteImport } from './routes/awards'
+import { Route as BoardPositionsRouteImport } from './routes/board-positions'
+import { Route as CampusRouteImport } from './routes/campus'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CoursesRouteImport } from './routes/courses'
+import { Route as EventsRouteImport } from './routes/events'
+import { Route as FacultyRouteImport } from './routes/faculty'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as HistoryRouteImport } from './routes/history'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdministrationRoute = AdministrationRouteImport.update({
+  id: '/administration',
+  path: '/administration',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdmissionsRoute = AdmissionsRouteImport.update({
+  id: '/admissions',
+  path: '/admissions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BoardPositionsRoute = BoardPositionsRouteImport.update({
+  id: '/board-positions',
+  path: '/board-positions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CampusRoute = CampusRouteImport.update({
+  id: '/campus',
+  path: '/campus',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoursesRoute = CoursesRouteImport.update({
+  id: '/courses',
+  path: '/courses',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EventsRoute = EventsRouteImport.update({
+  id: '/events',
+  path: '/events',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FacultyRoute = FacultyRouteImport.update({
+  id: '/faculty',
+  path: '/faculty',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HistoryRoute = HistoryRouteImport.update({
+  id: '/history',
+  path: '/history',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/administration': typeof AdministrationRoute
+  '/admissions': typeof AdmissionsRoute
+  '/awards': typeof AwardsRoute
+  '/board-positions': typeof BoardPositionsRoute
+  '/campus': typeof CampusRoute
+  '/contact': typeof ContactRoute
+  '/courses': typeof CoursesRoute
+  '/events': typeof EventsRoute
+  '/faculty': typeof FacultyRoute
+  '/gallery': typeof GalleryRoute
+  '/history': typeof HistoryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/administration': typeof AdministrationRoute
+  '/admissions': typeof AdmissionsRoute
+  '/awards': typeof AwardsRoute
+  '/board-positions': typeof BoardPositionsRoute
+  '/campus': typeof CampusRoute
+  '/contact': typeof ContactRoute
+  '/courses': typeof CoursesRoute
+  '/events': typeof EventsRoute
+  '/faculty': typeof FacultyRoute
+  '/gallery': typeof GalleryRoute
+  '/history': typeof HistoryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/administration': typeof AdministrationRoute
+  '/admissions': typeof AdmissionsRoute
+  '/awards': typeof AwardsRoute
+  '/board-positions': typeof BoardPositionsRoute
+  '/campus': typeof CampusRoute
+  '/contact': typeof ContactRoute
+  '/courses': typeof CoursesRoute
+  '/events': typeof EventsRoute
+  '/faculty': typeof FacultyRoute
+  '/gallery': typeof GalleryRoute
+  '/history': typeof HistoryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/administration'
+    | '/admissions'
+    | '/awards'
+    | '/board-positions'
+    | '/campus'
+    | '/contact'
+    | '/courses'
+    | '/events'
+    | '/faculty'
+    | '/gallery'
+    | '/history'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/administration'
+    | '/admissions'
+    | '/awards'
+    | '/board-positions'
+    | '/campus'
+    | '/contact'
+    | '/courses'
+    | '/events'
+    | '/faculty'
+    | '/gallery'
+    | '/history'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/administration'
+    | '/admissions'
+    | '/awards'
+    | '/board-positions'
+    | '/campus'
+    | '/contact'
+    | '/courses'
+    | '/events'
+    | '/faculty'
+    | '/gallery'
+    | '/history'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  AdministrationRoute: typeof AdministrationRoute
+  AdmissionsRoute: typeof AdmissionsRoute
+  AwardsRoute: typeof AwardsRoute
+  BoardPositionsRoute: typeof BoardPositionsRoute
+  CampusRoute: typeof CampusRoute
+  ContactRoute: typeof ContactRoute
+  CoursesRoute: typeof CoursesRoute
+  EventsRoute: typeof EventsRoute
+  FacultyRoute: typeof FacultyRoute
+  GalleryRoute: typeof GalleryRoute
+  HistoryRoute: typeof HistoryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/administration': {
+      id: '/administration'
+      path: '/administration'
+      fullPath: '/administration'
+      preLoaderRoute: typeof AdministrationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admissions': {
+      id: '/admissions'
+      path: '/admissions'
+      fullPath: '/admissions'
+      preLoaderRoute: typeof AdmissionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/board-positions': {
+      id: '/board-positions'
+      path: '/board-positions'
+      fullPath: '/board-positions'
+      preLoaderRoute: typeof BoardPositionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/campus': {
+      id: '/campus'
+      path: '/campus'
+      fullPath: '/campus'
+      preLoaderRoute: typeof CampusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/courses': {
+      id: '/courses'
+      path: '/courses'
+      fullPath: '/courses'
+      preLoaderRoute: typeof CoursesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/events': {
+      id: '/events'
+      path: '/events'
+      fullPath: '/events'
+      preLoaderRoute: typeof EventsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faculty': {
+      id: '/faculty'
+      path: '/faculty'
+      fullPath: '/faculty'
+      preLoaderRoute: typeof FacultyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/history': {
+      id: '/history'
+      path: '/history'
+      fullPath: '/history'
+      preLoaderRoute: typeof HistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  AdministrationRoute: AdministrationRoute,
+  AdmissionsRoute: AdmissionsRoute,
+  AwardsRoute: AwardsRoute,
+  BoardPositionsRoute: BoardPositionsRoute,
+  CampusRoute: CampusRoute,
+  ContactRoute: ContactRoute,
+  CoursesRoute: CoursesRoute,
+  EventsRoute: EventsRoute,
+  FacultyRoute: FacultyRoute,
+  GalleryRoute: GalleryRoute,
+  HistoryRoute: HistoryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
